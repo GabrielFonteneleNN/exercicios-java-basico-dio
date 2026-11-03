@@ -1,0 +1,106 @@
+Exercícios
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+   1. Escreva um código que receba o nome e o ano de nascimento de alguém e imprima na tela a seguinte mensagem: "Olá 'Fulano' você tem 'X' anos"
+
+    import java.time.OffsetDateTime;
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String []args) {
+
+        var scanner = new Scanner(System.in);
+        var atualYear = OffsetDateTime.now().getYear();
+        System.out.println("Informe o seu nome: ");
+        var name = scanner.nextLine();
+
+        System.out.println("Informe o ano do seu nascimento: ");
+        var year = scanner.nextInt();
+
+        var age = atualYear - year;
+
+        System.out.printf("Olá %s! você tem %s anos.\n", name, age);
+        
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+   2. Escreva um código que receba o tamanho do lado de um quadrado, calcule sua área e exiba na tela
+        fórmula: área=lado X lado
+
+    import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String []args) {
+
+        var scanner = new Scanner(System.in);
+        System.out.println("Informe o lado do quadrado: ");
+        var value1 = scanner.nextDouble();
+
+        //formula da área do quadrado
+        var formula = Math.pow(value1, 2);
+
+        System.out.printf("A área do quadrado é %s\n", formula);
+
+
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+   3. Escreva um código que receba a base e a alturade um retângulo, calcule sua área e exiba na tela
+        fórmula: área=base X altura
+
+  import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String []args) {
+
+        var scanner = new Scanner(System.in);
+        System.out.println("Informe a base do retângulo: ");
+        var value1 = scanner.nextDouble();
+
+        System.out.println("Informe a altura do retângulo: ");
+        var value2 = scanner.nextDouble();
+
+        //formula do retângulo
+        var formula = value1 * value2;
+
+        System.out.printf("A área do retângulo é %s\n", formula);
+
+
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+  4. Escreva um código que receba o nome e a idade de 2 pessoas e imprima a diferença de idade entre elas
+
+  import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String []args) {
+
+        var scanner = new Scanner(System.in);
+        System.out.println("Informe o nome da primeira pessoa: ");
+        var firstName = scanner.nextLine();
+        System.out.println("Informe o nome da segunda pessoa: ");
+        var secondName = scanner.nextLine();
+
+        System.out.println("Informe a idade da primeira pessoa: ");
+        var age1 = scanner.nextInt();
+        System.out.println("Informe a idade da segunda pessoa: ");
+        var age2 = scanner.nextInt();
+
+        //diferença de idade
+        var ageDifference = age1 - age2;
+        System.out.printf("A diferença entre a idade de %s e %s é de %s anos!\n", firstName, secondName, ageDifference);
+
+
+    }
+}
